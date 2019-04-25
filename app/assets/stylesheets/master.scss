@@ -30,3 +30,11 @@ body {
   font-weight: 600;
   letter-spacing: -0.3px;
 }
+.pagination {
+  color: red;
+
+  a {
+    color: red;
+    padding-left: 15px;
+  }
+}
