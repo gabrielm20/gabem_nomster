@@ -32,9 +32,18 @@ body {
 }
 .pagination {
   color: red;
+  padding-left: 110px;
 
-  a {
-    color: red;
+  .previous_page {
+    padding-right: 15px;
+
+  }
+  .next_page {
     padding-left: 15px;
+  }
+
+  .current {
+    padding-left: 5px;
+    padding-right: 10px;
   }
 }
