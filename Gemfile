@@ -68,7 +68,7 @@ gem 'will_paginate', '> 3.0'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'devise'
-gem 'geocode'
+gem 'geocoder'
 gem 'figaro'
 
 source 'https://rails-assets.org' do
