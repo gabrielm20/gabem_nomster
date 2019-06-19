@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_06_220743) do
+ActiveRecord::Schema.define(version: 2019_06_19_005311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,15 @@ ActiveRecord::Schema.define(version: 2019_05_06_220743) do
     t.index ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.text "caption"
+    t.integer "place_id"
+    t.string "picture"
+    t.integer "user_id"
+    t.index ["caption", "place_id"], name: "index_photos_on_caption_and_place_id"
+    t.index ["user_id"], name: "index_photos_on_user_id"
+  end
+
   create_table "places", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -47,6 +56,7 @@ ActiveRecord::Schema.define(version: 2019_05_06_220743) do
     t.integer "user_id"
     t.float "latitude"
     t.float "longitude"
+    t.string "pictures"
     t.index ["user_id"], name: "index_places_on_user_id"
   end
 
