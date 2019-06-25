@@ -5,8 +5,10 @@
   <p><%= @place.description %></p>
   <div class="booyah-box col-sm-9 offset-1">
     <%= @place.photos.each do |photo| %>
-      <%= image_tag photo.picture.url %>
+      <%= image_tag photo.picture.url%>
+      <blockquote>
       <%= photo.caption %>
+    </blockquote>
     <% end %>
   </div>
 
